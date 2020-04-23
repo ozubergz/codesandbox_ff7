@@ -1,11 +1,12 @@
 import React from "react";
 
 const Card = (props) => {
-  const { character } = props;
+  const { character, handleClick } = props;
   return(
     <div>
       <div 
         className="card" 
+        onClick={() => handleClick(character)}
         style={{backgroundImage: `url(${character.image})`}}
       >
       </div>

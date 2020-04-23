@@ -19,7 +19,7 @@ class CardContainer extends Component {
       <div className="card-container">
         {
           this.state.characters.map(character => {
-            return <Card key={character.id} character={character} />
+            return <Card key={character.id} character={character} handleClick={this.props.handleClick} />
           })
         }
       </div>
