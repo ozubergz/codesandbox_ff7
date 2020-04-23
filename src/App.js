@@ -24,6 +24,10 @@ class App extends Component {
     });
   }
 
+  // handleOpenClick = () => {
+  //   console.log('fired')
+  // }
+
   render() {
     return (
       <div className="App">
