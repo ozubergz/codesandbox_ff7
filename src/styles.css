@@ -1,0 +1,14 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+.banner {
+  height: 200px;
+  text-align: center;
+}
+
+.banner > img {
+  height: 200px;
+}
