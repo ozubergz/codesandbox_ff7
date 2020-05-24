@@ -5,44 +5,38 @@ import CardContainer from "./containers/CardContainer";
 import "./styles.css";
 
 class App extends Component {
-
-  state ={
+  state = {
     character: "",
     showModal: false
-  }
-  
-  handleClick = (character) => {
+  };
+
+  handleClick = character => {
     this.setState({
       character: character,
       showModal: true
     });
-  }
+  };
 
-  handleCloseClick = () => {
+  handleClose = () => {
     this.setState({
       showModal: false
     });
-  }
+  };
 
   render() {
     return (
       <div className="App">
         <Banner />
         <CardContainer handleClick={this.handleClick} />
-        { 
-          this.state.showModal ? 
-            <Modal 
-              character={this.state.character}
-              handleCloseClick={this.handleCloseClick}
-            /> 
-              : 
-            null 
-        }
+        {this.state.showModal ? (
+          <Modal
+            character={this.state.character}
+            handleClose={this.handleClose}
+          />
+        ) : null}
       </div>
     );
   }
 }
 
 export default App;
-
-
